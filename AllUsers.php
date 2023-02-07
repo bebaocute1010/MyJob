@@ -42,8 +42,7 @@ $users = $connect->query($sql);
             </tbody>
         </table>
 
-        <a class="btn btn-primary" href='http://localhost/MyJob/T2_6/'>Back</a>
-
+        <tr><a class="btn btn-primary" href='http://localhost/MyJob/T2_6/'>Back</a></tr>
     </div>
 </body>
 
