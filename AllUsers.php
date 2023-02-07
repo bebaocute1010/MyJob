@@ -19,30 +19,31 @@ $users = $connect->query($sql);
 
 <body>
     <div class="container">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Password</th>
-                </tr>
-            </thead>
-            <tbody>
-        <?php
-            foreach ($users as $user):
-        ?>
-                <tr>
-                    <th scope="row"><?php echo $user['id'] ?></th>
-                    <td><?php echo $user['email'] ?></td>
-                    <td><?php echo $user['password'] ?></td>
-                </tr>
-        <?php
-            endforeach;
-        ?>
-            </tbody>
-        </table>
-
-        <tr><a class="btn btn-primary" href='http://localhost/MyJob/T2_6/'>Back</a></tr>
+        <div style="width: 100%";>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <?php
+                foreach ($users as $user):
+            ?>
+                    <tr>
+                        <th scope="row"><?php echo $user['id'] ?></th>
+                        <td><?php echo $user['email'] ?></td>
+                        <td><?php echo $user['password'] ?></td>
+                    </tr>
+            <?php
+                endforeach;
+            ?>
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href='http://localhost/MyJob/T2_6/'>Back</a>
+        </div>
     </div>
 </body>
 
