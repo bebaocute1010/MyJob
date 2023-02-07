@@ -8,15 +8,13 @@
     <title>Sign Up</title>
     <?php require('bootstrap.php');?>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript">
+    </script>
     <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
-
-
     <div class="container">
-
         <form id='form' name='form' action="SignUp.php" method="POST">
             <h1>Sign Up</h1>
             <div class="mb-3">
@@ -51,12 +49,12 @@
                     minlength: 8
                 }
             },
-            messages:{
-                "email":{
+            messages: {
+                "email": {
                     required: "Please enter your email !",
                     email: "Email not valid !"
                 },
-                "password":{
+                "password": {
                     required: "Please enter your password !",
                     minlength: "Password must have at least 8 characters !"
                 }
