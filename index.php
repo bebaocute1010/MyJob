@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <?php require('bootstrap.php');?>
+    <?php
+        require('bootstrap.php');
+    ?>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript">
     </script>
@@ -60,9 +62,8 @@
                 }
             }
         });
-    });
+    })
     function submitForm() {
-        // alert(1)
         $.ajax({
             url: "SignUp.php",
             method: "POST",

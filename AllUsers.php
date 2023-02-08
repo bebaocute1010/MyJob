@@ -1,8 +1,7 @@
 <?php
-require 'connect.php';
-
-$sql = "SELECT * FROM users";
-$users = $connect->query($sql);
+    require 'connect.php';
+    $sql = "SELECT * FROM users";
+    $users = $connect->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +12,9 @@ $users = $connect->query($sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Users</title>
-    <?php require 'bootstrap.php';?>
+    <?php
+        require 'bootstrap.php';
+    ?>
     <link rel="stylesheet" href="app.css">
 </head>
 
@@ -33,9 +34,23 @@ $users = $connect->query($sql);
                 foreach ($users as $user):
             ?>
                     <tr>
-                        <th scope="row"><?php echo $user['id'] ?></th>
-                        <td><?php echo $user['email'] ?></td>
-                        <td><?php echo $user['password'] ?></td>
+                        <th scope="row">
+                        <?php 
+                            echo $user['id']
+                        ?>
+                        </th>
+
+                        <td>
+                        <?php
+                            echo $user['email']
+                        ?>
+                        </td>
+                        
+                        <td>
+                        <?php
+                            echo $user['password']
+                        ?>
+                        </td>
                     </tr>
             <?php
                 endforeach;
