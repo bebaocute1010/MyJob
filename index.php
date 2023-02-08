@@ -67,13 +67,13 @@
         $.ajax({
             url: "SignUp.php",
             method: "POST",
+            dataType: "json",
             data: {
                 email: $("#tbEmail").val(),
                 password: $("#tbPassword").val()
             },
             success: function(response) {
-                obj = JSON.parse(response)
-                alert(obj.message)
+                alert(response.message)
             }
         })
     }
