@@ -3,4 +3,3 @@
     $username = "root";
     $password = "";
     $dbName = "myjob";
-?>
