@@ -15,20 +15,20 @@
 
 <body>
     <div class="container">
-        <form id='form' name='form' action="SignUp.php" method="POST">
+        <form id='form' name='form'>
             <h1>Sign Up</h1>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <label for="tbEmail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="tbEmail" aria-describedby="emailHelp"
                     name='email'>
             </div>
 
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name='password'>
+                <label for="tbPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="tbPassword" name='password'>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" onClick="submitForm()">Submit</button>
         </form>
 
         <!-- <a class="btn btn-primary" href='http://localhost/MyJob/T2_6/AllUsers.php'>All users</a> -->
@@ -61,6 +61,21 @@
             }
         });
     });
+    function submitForm() {
+        // alert(1)
+        $.ajax({
+            url: "SignUp.php",
+            method: "POST",
+            data: {
+                email: $("#tbEmail").val(),
+                password: $("#tbPassword").val()
+            },
+            success: function(response) {
+                obj = JSON.parse(response)
+                alert(obj.message)
+            }
+        })
+    }
     </script>
 </body>
 
