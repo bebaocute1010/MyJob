@@ -1,5 +1,5 @@
 <?php
-    require 'connect.php';
+    require '../Database/connect.php';
     $sql = "SELECT * FROM users";
     $users = $connect->query($sql);
 ?>
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Users</title>
     <?php
-        require 'bootstrap.php';
+        require '../bootstrap.php';
     ?>
     <link rel="stylesheet" href="app.css">
 </head>

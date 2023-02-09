@@ -1,5 +1,5 @@
 <?php
-require 'connect.php';
+require '../Database/connect.php';
 if (isset($_POST['email']) and isset($_POST['password'])) {
     $sql = "INSERT INTO users (email, password) VALUES ('" . $_POST['email'] . "', '" . $_POST['password'] . "')";
     try {
