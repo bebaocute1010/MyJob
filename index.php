@@ -30,7 +30,7 @@
                 <input type="password" class="form-control" id="tbPassword" name='password'>
             </div>
 
-            <button type="button" class="btn btn-primary" onClick="submitForm()">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
         <!-- <a class="btn btn-primary" href='http://localhost/MyJob/T2_6/AllUsers.php'>All users</a> -->
@@ -60,12 +60,15 @@
                     required: "Please enter your password !",
                     minlength: "Password must have at least 8 characters !"
                 }
+            },
+            submitHandler: function(form) {
+                submitForm()
             }
         });
     })
     function submitForm() {
         $.ajax({
-            url: "SignUp.php",
+            url: "Logic/sign_up.php",
             method: "POST",
             dataType: "json",
             data: {
