@@ -5,7 +5,7 @@ use DebugBar\StandardDebugBar;
 $debugbar = new StandardDebugBar();
 $debugbarRenderer = $debugbar->getJavascriptRenderer();
 
-$debugbar["messages"]->addMessage("hello world!");
+// $debugbar["messages"]->addMessage("hello world!");
 ?>
 <!DOCTYPE html>
 <html lang="en">
