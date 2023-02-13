@@ -1,7 +1,17 @@
+<?php
+include 'vendor/autoload.php';
+use DebugBar\StandardDebugBar;
+
+$debugbar = new StandardDebugBar();
+$debugbarRenderer = $debugbar->getJavascriptRenderer();
+
+// $debugbar["messages"]->addMessage("hello world!");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <?php echo $debugbarRenderer->renderHead() ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +42,6 @@
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-
         <!-- <a class="btn btn-primary" href='http://localhost/MyJob/T2_6/AllUsers.php'>All users</a> -->
     </div>
 
@@ -81,6 +90,8 @@
         })
     }
     </script>
+
+    <?php echo $debugbarRenderer->render() ?>
 </body>
 
 </html>
